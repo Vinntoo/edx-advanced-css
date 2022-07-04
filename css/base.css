@@ -52,3 +52,127 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+html{
+	/* 1 rem = 10px */
+	font-size: 62.5%;
+
+	/* border box fix*/
+	box-sizing: border-box;
+
+	/* smooth scrolling */
+	scroll-behavior: smooth;
+}
+
+
+/*--------------------------------------------------
+#CSS Variables
+-----------------------------------*/
+
+:root{
+	/*Screen Widths*/
+	--wide: 128rem; /*320px diff*/
+	--desktop: 96rem; /*240px diff*/
+	--tablet: 72rem; /*180px diff*/
+	--phone: 54rem;
+
+	/* Colors */
+	--color-text: #efefef;
+	--color-white: #ffffff;
+	--color-bg: #151025; /* #050060 - darker */
+	--color-bg-dk: #050060; /* rgb(5, 0, 96); */
+	--color-purple-rgb: rgba(164, 88, 255, 1); /* #d392ff? */
+	--color-purple-dk: #a458ff;
+	--color-purple: #d392ff;
+	--color-blue-rgb: rgba(53, 68, 255, 1); /* #3544ff? */
+	--color-blue: #3544ff;
+	--color-blue-dk-rgb: rgba(10, 47, 158, 1); /* #0a2f9e? */
+	--color-blue-dk: #0a2f9e;
+	--color-neon-dk: #24d6ff;
+	--color-neon: #00ffff;
+	--color-yellow: #f5b81b;
+	--color-gray: #585963;
+
+	/* Gradients */
+	--bg-gradient: linear-gradient(
+		240deg,
+		rgba(164, 88, 255, 1) 0%,
+		rgba(53, 68, 255, 1) 40%,
+		rgba(10, 47, 158, 1) 80%
+	  );
+	--bg-gradient-img: url("https://www.transparenttextures.com/patterns/stardust.png"),
+	  linear-gradient(
+		240deg,
+		rgba(164, 88, 255, 1) 0%,
+		rgba(53, 68, 255, 1) 40%,
+		rgba(10, 47, 158, 1) 80%
+	  );
+	--bg-gradient-reverse: linear-gradient(
+		60deg,
+		rgba(164, 88, 255, 1) 0%,
+		rgba(53, 68, 255, 1) 40%,
+		rgba(10, 47, 158, 1) 80%
+	  );
+	--bg-gradient-img-reverse: url("https://www.transparenttextures.com/patterns/stardust.png"),
+	  linear-gradient(
+		60deg,
+		rgba(164, 88, 255, 1) 0%,
+		rgba(53, 68, 255, 1) 40%,
+		rgba(10, 47, 158, 1) 80%
+		  );
+
+
+		  
+	/* Shadows */
+	--text-shadow: 1px 2px 4px rgba(5, 0, 96, 0.5);
+	--text-shadow-strong: 1px 1px 3px rgba(5, 0, 96, 0.85);
+
+	/* Easings */
+	--ease-bounce: cubic-bezier(.75,-0.5,0,1.75);
+
+	/* Text Sizing */
+	--base-size: 1.6rem /* 16px*/
+	--type-scale: 1.33;
+	--small: var(--base-size);
+	--body: calc( var(--base-size) * var(--type-scale) ); /* 21.33px */
+	--h6: calc(var(--body) * var(--type-scale) ); /* 28.43px */
+	--h5: calc(var(--h6) * var(--type-scale) ); 
+	--h4: calc(var(--h5) * var(--type-scale) ); 
+	--h3: calc(var(--h4) * var(--type-scale) ); 
+	--h2: calc(var(--h3) * var(--type-scale) ); 
+	--h1: calc(var(--h2) * var(--type-scale) ); 
+
+}
+
+
+@media screen  and (max-width: 72rem){
+	:root{
+		--type-scale: 1.25;
+	}
+	
+}
+@media screen  and (max-width: 56rem){
+	:root{
+		--type-scale: 1.15;
+	}
+	
+}
+
+
+
+/*--------------------------------------------------
+#Typography Section
+-----------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1{
+	font-size: var(--h1);
+}
