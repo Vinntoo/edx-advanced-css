@@ -17,17 +17,7 @@ input {
   
   /* Accordion styles */
   .tabs {
-   /* border-radius: 10px; */
     overflow: hidden;
-    /*   background: white; */
-    /* background-image: url("https://www.transparenttextures.com/patterns/stardust.png"),
-    linear-gradient(
-      240deg,
-      rgba(164, 88, 255, 1) 0%,
-      rgba(53, 68, 255, 1) 40%,
-      rgba(10, 47, 158, 1) 80%
-    ); */
-    /* box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5); */
   }
   
   .tab {
@@ -40,13 +30,6 @@ input {
     display: flex;
     justify-content: space-between;
     padding: 1em;
-    /* background-image: url("https://www.transparenttextures.com/patterns/stardust.png"),
-      linear-gradient(
-        240deg,
-        rgba(164, 88, 255, 1) 0%,
-        rgba(53, 68, 255, 1) 40%,
-        rgba(10, 47, 158, 1) 80%
-      ); */
     font-weight: bold;
     cursor: pointer;
   }
@@ -67,8 +50,6 @@ input {
   .tab-content {
     max-height: 0px;
     padding: 0 1em;
-    /* color: #151025; */
-    /* background: white; */
     color: #efefef;
     transition: all 0.35s;
   }
@@ -90,36 +71,12 @@ input {
     padding: 0 5px;
     color: white;
     transform: rotate(-10deg);
-    left: -2.6em;
+    left: -.6em;
     font-size: 0.8em;
     line-height: 1.8em;
   }
 
 /*
-
-## not used in scenario -- used for closing open tabs
-  .tab-close {
-    display: flex;
-    justify-content: flex-end;
-    padding: 1em;
-    font-size: 0.75em;
-    background-image: url("https://www.transparenttextures.com/patterns/stardust.png"),
-      linear-gradient(
-        240deg,
-        rgba(164, 88, 255, 0.75) 0%,
-        rgba(53, 68, 255, 0.75) 40%,
-        rgba(10, 47, 158, 0.75) 80%
-      );
-    cursor: pointer;
-  }
-
-  
-  
-  .tab-close:hover {
-    opacity: 0.8;
-  }
-  
-  */
 
 
   /* :checked */
@@ -169,7 +126,7 @@ input {
 .navicon:after {
   background: transparent;
   border-bottom: 2px solid #101525;
-  border-top: 1px solid #101525;
+  border-top: 1px solid var(--color-white);
   content: '';
   height: 7px;
   position: fixed;
@@ -203,6 +160,7 @@ input {
 .nav-check:checked + .navicon:before,
 .nav-check:checked + .navicon:after{
   background: #101525;
+  background: var(--color-white);
   border: none;
   height: 2px;
   left: 0.6875rem;
@@ -265,14 +223,14 @@ nav.site-navigation{
 
 }
 
-.site-main{
-  width: 100vw;
-  height: 100vh;
 
-}
+/*--------------------------------------------------
+#Social navigation
+----------------------------------*/
 
-body{
-  overflow-x: hidden;
+.social-navigation li{
+  display: inline-block;
+  margin-left: 1rem;
 }
 
 
