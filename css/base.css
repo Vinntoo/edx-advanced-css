@@ -179,16 +179,24 @@ body{
 	font-family: var(--font-body);
 	margin: 0;
 	background: var(--color-bg-dk);
-	color: var(--color-text);
-	color: var(--color-bg-dk);
+	color: #efefef;
+	color: var(--color-text); /*add older browser fallback originalcolor */
+	/* color: var(--color-bg-dk); */
 	overflow-x: hidden;
-	
-
 }
 
-
-
-
+.site-main{
+	min-height: 100%;
+	min-width: 100%;
+	background: var(--color-bg-dk);
+	position: relative;
+	top: 0;
+	bottom: 100%;
+	left: 0;
+	z-index: 1;
+	transition: left 0.2s;
+  }
+  
 
 /*--------------------------------------------------
 #Typography Section
@@ -308,6 +316,7 @@ ul{
 	font-size: var(--h4);
 	background-image: var(--bg-gradient);
 	display: inline-block;
+	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 
@@ -316,6 +325,7 @@ ul{
 
 .sub-section-title.white{
 	color: var(--color-white);
+	-webkit-text-fill-color: var(--color-white);
 	margin-bottom: 1.6rem;
 }
 

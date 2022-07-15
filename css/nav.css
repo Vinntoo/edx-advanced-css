@@ -98,17 +98,6 @@ input {
 ## Off Screen Navigation
 ----------------------------------*/
 
-.site-main{
-  min-height: 100%;
-  min-width: 100%;
-  background: white;
-  position: relative;
-  top: 0;
-  bottom: 100%;
-  left: 0;
-  z-index: 1;
-}
-
 
 .navicon{
   color: #101525;
@@ -119,7 +108,7 @@ input {
   width: 3rem;
   z-index: 20;
   transform: rotate(90deg);
-  transition: 0.3s all ease-in-out;
+  transition: 0.2s all ease-in-out;
 }
 
 .navicon:before, 
@@ -133,7 +122,7 @@ input {
   left: .5rem;
   top: 1.25rem;
   width: 55%;
-  transition: 0.3s all ease-in-out 0.3s;
+  transition: 0.2s all ease-in-out 0.2s;
 }
 
 .navicon:before{
@@ -154,7 +143,7 @@ input {
   top: 0.25rem;
   width: 3rem;
   z-index: 21;
-  transition: 0.3s all ease-in-out;
+  transition: 0.2s all ease-in-out;
 }
 
 .nav-check:checked + .navicon:before,
@@ -179,7 +168,7 @@ input {
 
 .nav-check:checked ~ nav {
 left: 0;
-transition: 0.3s all ease-in-out;
+transition: 0.2s all ease-in-out;
 
 }
 
@@ -206,9 +195,6 @@ nav.site-navigation{
 
 
 /* Make the magic happen*/
-.site-main{
-  transition: left 0.2s;
-}
 
 .nav-check:checked + .navicon,
 .nav-check:checked{
